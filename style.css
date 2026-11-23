@@ -955,7 +955,9 @@ header > .container > .row {
   font-weight: 700;
   line-height: 1.5;
   white-space: nowrap;
-  transition: background-color 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 .start__button:first-child {
@@ -1239,6 +1241,7 @@ footer {
     flex: auto;
     width: 100%;
     max-width: 576px;
+    text-align: center;
   }
 
   .steps__description,
@@ -1276,32 +1279,63 @@ footer {
   }
 }
 
-@media (max-width: 640px) {
-  section,
-  #quality {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+@media (max-width: 640px) section, #quality {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  .container,
-  #start .container,
-  #testimonials .container {
-    padding: 48px 0;
-  }
+.container,
+#start .container,
+#testimonials .container {
+  padding: 48px 0;
+}
 
-  main {
-    margin-bottom: 48px;
-  }
+main {
+  margin-bottom: 48px;
+}
 
-  .header__description h1 {
-    font-size: 30px;
-  }
+.header__description h1 {
+  font-size: 30px;
+}
 
-  .section__title,
-  .steps__title {
-    font-size: 32px;
-  }
+.section__title,
+.steps__title {
+  font-size: 32px;
+}
 
+.steps__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.testimonial__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
   .header__email {
     height: auto;
     flex-direction: column;
@@ -1331,6 +1365,9 @@ footer {
 
   .feature__row {
     padding: 24px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .start__container {
@@ -1356,6 +1393,12 @@ footer {
 
   footer {
     padding: 56px 20px;
+  }
+
+  .values__list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
